@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Products</h1>
+
+         <section class="product-controls">
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+  <select id="priceFilter" onchange="filterProducts()">
+    <option value="all">All Prices</option>
+    <option value="0-50">Under $50</option>
+    <option value="50-150">$50 - $150</option>
+    <option value="150-1000">Above $150</option>
+  </select>
+</section>
+    <nav>
+      <a href="indes.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+ 
+  </header>
+
+  <section class="products" id="product-list">
+    <!-- Products will be inserted dynamically with JS -->
+  </section>
+
+  
+
+
+  <script src="main.js"></script>
+</body>
+</html>

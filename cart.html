@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Your Shopping Cart</h1>
+    <nav>
+      <a href="indes.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="cart-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items will appear here -->
+      </tbody>
+    </table>
+    <h3 id="grand-total">Grand Total: $0</h3>
+  </section>
+<section class="checkout-container">
+  <h2>Order Details</h2>
+  <form id="checkoutForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Address" required>
+    <input type="text" placeholder="City" required>
+    <input type="text" placeholder="Country" required>
+    <input type="number" placeholder="ZIP / Postal Code" required>
+
+    <h3>Payment Details</h3>
+    <input type="text" placeholder="Card Number" required>
+    <input type="text" placeholder="Expiry Date (MM/YY)" required>
+    <input type="text" placeholder="CVV" required>
+
+    <button type="submit">Place Order</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("checkoutForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Order placed successfully! (Demo)");
+    localStorage.removeItem("cart"); // Clear cart
+    window.location.href = "index.html"; // Redirect home
+  });
+</script>
+
+
+  <script src="m.js"></script>
+</body>
+</html>

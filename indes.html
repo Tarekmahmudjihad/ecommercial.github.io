@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shop - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Shop</h1>
+    <nav>
+      <a href="#" id="authLink" onclick="openModal()">Login</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a>
+      <a href="contact.html">Contact</a>
+      
+
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content"  style="background-image:url(img1.jpg);" >
+      <h2>Welcome to My Shop</h2>
+      <p>Find the best deals on your favorite products.</p>
+      <a href="product.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+<section class="hero-slider">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('MB1.webp');">
+      <div class="hero-content">
+        <h2>Big Sale Today!</h2>
+        <p>Get up to 50% off selected items</p>
+        <a href="product.html" class="btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('s1.jpeg');">
+      <div class="hero-content">
+        <h2>Latest Gadgets</h2>
+        <p>Smart tech for your lifestyle</p>
+        <a href="product.html" class="btn">Explore</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('iphone1.jpeg');">
+      <div class="hero-content">
+        <h2>New Arrivals</h2>
+        <p>Fresh styles just dropped</p>
+        <a href="product.html" class="btn">Discover</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="prev" onclick="changeSlide(-1)">❮</a>
+  <a class="next" onclick="changeSlide(1)">❯</a>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span onclick="currentSlide(0)" class="dot active"></span>
+    <span onclick="currentSlide(1)" class="dot"></span>
+    <span onclick="currentSlide(2)" class="dot"></span>
+  </div>
+</section>
+
+
+<!-- Login/Register Modal -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button id="loginTab" class="tab active" onclick="showTab('login')">Login</button>
+      <button id="registerTab" class="tab" onclick="showTab('register')">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="form active">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" e.target.reset();>Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="form">
+      <h2>Create Account</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- Services -->
+  <section class="services">
+    <div class="service">
+      <h3>🚚 Free Shipping</h3>
+      <p>On all orders above $50</p>
+    </div>
+    <div class="service">
+      <h3>💳 Secure Payment</h3>
+      <p>100% safe checkout</p>
+    </div>
+    <div class="service">
+      <h3>📞 24/7 Support</h3>
+      <p>We’re here to help anytime</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Shop. All rights reserved.</p>
+    <p>Email: tarekmahmud8bp@gmail.com | Phone: +880 170 850 7400</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
